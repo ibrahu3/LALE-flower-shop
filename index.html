@@ -1,31 +1,29 @@
-<div id="organizingSection">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LALE Flower Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <div class="bouquet-container">
+    <h1>LALE Flower Shop</h1>
 
-        <div class="price-box">
-            Total: $<span id="totalPrice">0</span>
-        </div>
+    <button onclick="showOrganizing()">Organizing</button>
 
+    <div id="organizingSection">
         <div class="bouquet-area" id="bouquetArea">
             <img src="images/bouquet.png" class="bouquet-image">
         </div>
 
+        <div class="sidebar">
+            <h2>Flowers</h2>
+            <p>Total: $<span id="totalPrice">0</span></p>
+
+            <img src="images/flower1.png" class="flower" onclick="addFlower('images/flower1.png')">
+            <img src="images/flower2.png" class="flower" onclick="addFlower('images/flower2.png')">
+        </div>
     </div>
 
-    <div class="sidebar">
-        <h2>Flowers</h2>
-
-        <img src="images/flower1.png"
-             class="flower"
-             draggable="true"
-             ondragstart="drag(event)"
-             id="flower1">
-
-        <img src="images/flower2.png"
-             class="flower"
-             draggable="true"
-             ondragstart="drag(event)"
-             id="flower2">
-    </div>
-
-</div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -4,39 +4,21 @@ function showOrganizing() {
     document.getElementById("organizingSection").style.display = "flex";
 }
 
-const bouquetArea = document.getElementById("bouquetArea");
-
-bouquetArea.addEventListener("dragover", function(event) {
-    event.preventDefault();
-});
-
-bouquetArea.addEventListener("drop", function(event) {
-    event.preventDefault();
-
-    const flowerId = event.dataTransfer.getData("text");
-
-    const originalFlower = document.getElementById(flowerId);
+function addFlower(flowerImage) {
+    const bouquetArea = document.getElementById("bouquetArea");
 
     const newFlower = document.createElement("img");
-
-    newFlower.src = originalFlower.src;
+    newFlower.src = flowerImage;
     newFlower.className = "added-flower";
 
-    const rect = bouquetArea.getBoundingClientRect();
+    const randomX = 220 + Math.random() * 120;
+    const randomY = 170 + Math.random() * 120;
 
-    const x = event.clientX - rect.left - 40;
-    const y = event.clientY - rect.top - 40;
-
-    newFlower.style.left = x + "px";
-    newFlower.style.top = y + "px";
+    newFlower.style.left = randomX + "px";
+    newFlower.style.top = randomY + "px";
 
     bouquetArea.appendChild(newFlower);
 
-    total += 10;
-
+    total = total + 10;
     document.getElementById("totalPrice").innerText = total;
-});
-
-function drag(event) {
-    event.dataTransfer.setData("text", event.target.id);
 }
