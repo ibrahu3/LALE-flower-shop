@@ -11,8 +11,8 @@ function addFlower(flowerImage) {
     newFlower.src = flowerImage;
     newFlower.className = "added-flower";
 
-    const randomX = 230 + Math.random() * 100;
-    const randomY = 180 + Math.random() * 120;
+    const randomX = 180 + Math.random() * 220;
+    const randomY = 260 + Math.random() * 90;
 
     newFlower.style.left = randomX + "px";
     newFlower.style.top = randomY + "px";
