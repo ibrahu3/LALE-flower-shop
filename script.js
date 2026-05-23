@@ -1,5 +1,3 @@
-let total = 0;
-
 function showOrganizing() {
     document.getElementById("organizingSection").style.display = "flex";
 }
@@ -18,7 +16,4 @@ function addFlower(flowerImage) {
     newFlower.style.top = randomY + "px";
 
     bouquetArea.appendChild(newFlower);
-
-    total = total + 10;
-    document.getElementById("totalPrice").innerText = total;
 }
