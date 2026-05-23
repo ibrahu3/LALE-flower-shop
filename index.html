@@ -7,9 +7,21 @@
 <body>
 
     <h1>LALE Flower Shop</h1>
-    <p>Welcome to LALE Flower Shop</p>
 
-    <button onclick="organizingClicked()">Organizing</button>
+    <button onclick="showOrganizing()">Organizing</button>
+
+    <div id="organizingSection">
+        <div class="bouquet-area" id="bouquetArea">
+            <img src="images/bouquet.png" class="bouquet-image">
+        </div>
+
+        <div class="sidebar">
+            <h2>Flowers</h2>
+
+            <img src="images/flower1.png" class="flower" onclick="addFlower('images/flower1.png')">
+            <img src="images/flower2.png" class="flower" onclick="addFlower('images/flower2.png')">
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
